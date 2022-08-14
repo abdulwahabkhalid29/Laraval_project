@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,67 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB PAGE:</title>
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/fontawesome.min.css')}}">
+    @include('scaffold.link')
 </head>
 <body style="font-family: Arial, Helvetica, sans-serif;">
-    <div class="container-fluid bg-primary" >
-        <div class="container">
-          <nav class="navbar navbar-expand-sm navbar-dark ">
-            <h3 class="navbar-brand " ><i class="fa fa-university"></i><a style="color: #051441; margin-top:-35px; margin-left:10px;" class="nav-link text-light" href="{{Route('welcom')}}">PLAY</a></h3>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarsExample03">
-              <ul class="navbar-nav mr-auto text-light">
-              <li class="nav-item ml-5">
-                    <b> <a style="color: #051441;" class="nav-link text-light" href="{{Route('aa12')}}">AA12</a></b>
-                </li>
-                <li class="nav-item ml-5">
-                    <b> <a style="color: #051441;" class="nav-link text-light" href="{{Route('ak47')}}">AK47</a></b>
-                </li>
-                <li class="nav-item ml-5">
-                    <b> <a style="color: #051441;" class="nav-link text-light" href="{{Route('ak74')}}">AK74</a></b>
-                </li>
-                <li class="nav-item ml-5">
-                    <b> <a style="color: #051441;" class="nav-link text-light" href="{{Route('akm')}}">AKM</a></b>
-                </li>
-                <li class="nav-item ml-5">
-                    <b> <a style="color: #051441;" class="nav-link text-light" href="{{Route('desartegal')}}">DesartEagle</a></b>
-                </li>
-                
-                
-                <li class="nav-item ">
-                  <p class="text-light mt-2" style="margin-left: 250px;" >Sign up</p>
-                </li>
-                <li class="nav-item">
-                <button class="btn btn-info ml-2"> Sign up</button>
-               </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-    </div>
-          <div class="container-fluid bg-primary p-5" >
-      <div class="container">
-        <h2 class="text-light text-center"><b> Open-Sourse Web Template For <br> SaaS,Startup,Apps and More </b></h2>
-        <p class="text-light text-center mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing .   <br>quas voluptatum, consequuntur quidem reiciendis?</p>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <button class="btn btn-light ">Download Now</button>
-            <button class="btn btn-primary ">Git Hub Repo <i class="fa fa-share"></i></button>  
-          </div>
-          <div class="col-md-12 text-center mt-4" >
-           <i class=" text-light fa fa-leaf p-2"></i>     
-           <i class=" text-light fa fa-recycle p-2"></i>
-           <i class=" text-light fa fa-leaf p-2"></i>
-           <i class=" text-light fa fa-universal-access p-2"></i>
-          </div>
-        </div>
-      </div>
-      </div><br><br>
+    @include('layout.header')
     <div class="container" >
     <b class="text-primary ml-5" style="font-size: 15px; ">FEATURE</b>
                 <h4 class=" ml-5">Main Feature Of PLAY</h4>
@@ -336,64 +280,7 @@
     </div>
   </div>
 </div>
-<footer>
-  <div class="container-fluid bg-dark p-5">
-      <div class="container mt-5 text-light">
-          <div class="row">
-              <div class="col-md-3">
-                  <i style="font-size: xx-large;" class="mb-3 text-light navbar-brand fa fa-university rounded"> Play</i><br>
-                  <small>Lorem ipsum dolor, sit amet consectetur adipisicing  Delectus hic nam, numquam sapiente.</small><br>
-                  <i class="mt-4 fa fa-envelope rounded"></i>
-                  <i class="ml-3 fa fa-download rounded"></i>
-                  <i class="ml-3 fa fa-desktop rounded"></i>
-                  <i class="ml-3 fa fa-edit rounded"></i>
-              </div>
-              <div class="col-md-2">
-                  <h5 class=" text-success mb-4">About Us</h5>
-                  <p class="text-light">Home</p>
-                  <p class="text-light">Feature</p>
-                  <p class="text-light">About</p>
-                  <p class="text-light">Testimonal</p>
-              </div>
-              <div class="col-md-2">
-                  <h5 class=" text-success mb-4">Features</h5>
-                  <p class="text-light">How it works</p>
-                  <p class="text-light">Privacy policy</p>
-                  <p class="text-light"> services</p>
-                  <p class="text-light">Refund policy</p>
-              </div>
-              <div class="col-md-2">
-                  <h5 class=" text-success">Our Products</h5>
-                  <p class="text-light mt-4">Lineicion</p>
-                  <p class="text-light">Ecommerce</p>
-                  <p class="text-light">Ayro Ul</p>
-                  <p class="text-light">Plain Admin</p>
-              </div>
-              <div class="col-md-2">
-                  <h5 class=" text-success">Partners</h5>
-                  <div class="col-md-12">
-                  <i class="mt-5 fa fa-audio-description rounded text-primary">Ayro Ul</i> 
-                </div>
-                <div class="col-md-12">
-                  <i class="mt-5 fa fa-low-vision rounded text-primary">GRAYGRIDS</i>  
-                </div>
-                <div class="col-md-12">
-                  <i class="mt-5 fa fa-paw rounded text-primary">Line Icons</i> 
-                </div>
-                <div class="col-md-12">
-                  <i class="mt-5 fa fa-cart-plus rounded text-primary">ecommerce</i> 
-                </div>
-              </div>
-              <p class="text-secondary">_______________________________________________________________________________________________________</p>
-          </div>
-            <p> <i class="fa fa-anchor text-warning" ></i> Privacy policy <i class="fa fa-bus text-warning" ></i> Support policy <i class="fa fa-edit text-warning" ></i>  Term of Service</p>
-            <p class="float-right" style="margin-top: -40px;">@ Designed and developed by <span class="text-primary">Ul Deck</span></p>
-          </div>
-         
-      </div>
-  </div>
-</footer>
-<script src="{{asset('assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+  @include('layout.footer')
+  @include('scaffold.script')
 </body>
 </html>
