@@ -7,6 +7,7 @@ use App\Http\Controllers\AK74Controller;
 use App\Http\Controllers\AKMController;
 use App\Http\Controllers\DesartegalController;
 use App\Http\Controllers\WelcomController;
+use App\Http\Controllers\Home\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,4 @@ Route::get('aK74', [AK74Controller::class, 'ak74'])->name('ak74');
 Route::get('akm', [AKMController::class, 'akm'])->name('akm');
 Route::get('desartegal', [DesartegalController::class, 'desartegal'])->name('desartegal');
 Route::get('welcom', [WelcomController::class, 'welcom'])->name('welcom');
+Route::get('index', [IndexController::class, 'index'])->name('index');
