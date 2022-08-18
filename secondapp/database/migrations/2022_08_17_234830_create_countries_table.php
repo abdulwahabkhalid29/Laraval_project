@@ -15,9 +15,15 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->string('country_name');
-            $table->integer('country_number');
-            $table->integer('captial_city');
+            $table->string('name');
+            $table->integer('number');
+            $table->double('population');
+            $table->tinyInteger('permission');
+            $table->text('information');
+            $table->date('date');
+            $table->datetime('time');
+            $table->string('empty')->nullable();
+            $table->timestamps();
         });
     }
 
