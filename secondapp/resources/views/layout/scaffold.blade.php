@@ -8,6 +8,7 @@
     @include('include.style')
 </head>
 <body>
+    @include('include.nav')
     @yield('content')
     @include('include.script')
 </body>

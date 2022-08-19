@@ -8,6 +8,7 @@ use App\Http\Controllers\AKMController;
 use App\Http\Controllers\DesartegalController;
 use App\Http\Controllers\WelcomController;
 use App\Http\Controllers\Home\IndexController;
+use App\Http\Controllers\CountryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,4 @@ Route::get('akm', [AKMController::class, 'akm'])->name('akm');
 Route::get('desartegal', [DesartegalController::class, 'desartegal'])->name('desartegal');
 Route::get('welcom', [WelcomController::class, 'welcom'])->name('welcom');
 Route::get('index', [IndexController::class, 'index'])->name('index');
+Route::get('countries', [CountryController::class, 'index'])->name('countries.index');
