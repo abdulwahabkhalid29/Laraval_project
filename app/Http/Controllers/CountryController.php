@@ -20,11 +20,13 @@ class CountryController extends Controller
             'name' => 'required|max:191|unique:countries,name',
             'number' => 'required|max:11|unique:countries,number',
             'population' => 'required|max:11|unique:countries,population',
+            'status' => 'required',
         ]);
         $store = Country::create([
             'name' => $request->name,
             'number' => $request->number,
             'population' => $request->population,
+            'status' => $request->status,
         ]);
 
         
@@ -38,20 +40,22 @@ class CountryController extends Controller
 
     }
     public function edit($id){
-        $countries = Country::where('id',$id)->first();
-        return view('countries.edit',compact('countries'));
+        $country = Country::where('id',$id)->first();
+        return view('countries.edit',compact('country'));
     }
 
     public function update(Request $request, $id){
-        $Request->validate([ 
-        'name' => 'required|max:191|unique:countries,name',
-        'number' => 'required|max:11|unique:countries,number',
-        'population' => 'required|max:11|unique:countries,population',
+        $request->validate([ 
+        'name' => 'required|max:191|:countries,name'.$id,
+        'number' => 'required|max:11|:countries,number'.$id,
+        'population' => 'required|max:11|:countries,population'.$id,
+        'status' => 'required',
     ]);
     $update = Country::where('id',$id)->update([
         'name' => $request->name,
         'number' => $request->number,
         'population' => $request->population,
+        'status' => $request->status,
     ]);
     if($update > 0){
         return redirect()->route('countries.index')->with('success','country update');
@@ -62,7 +66,7 @@ class CountryController extends Controller
     
     public function delete($id){
        $countries = Country::where('id',$id)->first();
-       if(empty($countries)){
+       if(!empty($countries)){
         $countries->delete();
         return redirect()->route('countries.index')->with('success','country delete');
        }

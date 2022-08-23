@@ -19,25 +19,25 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label>Name</label>
-                        <input type="text" name="name" class="form-control" >
+                        <input type="text" name="name" class="form-control" value="{{$country->name}}">
                         <small class="text-danger">@error('name')  {{$message}} @enderror</small>
                     </div>
                     <div class="col-md-6">
                         <label>Number</label>
-                        <input type="number" name="number" class="form-control" >
+                        <input type="number" name="number" class="form-control"  value="{{$country->number}}">
                         <small class="text-danger">@error('number')  {{$message}} @enderror</small>
                     </div>
                     <div class="col-md-6">
                         <label>Population</label>
-                        <input type="text" name="population" class="form-control" >
+                        <input type="text" name="population" class="form-control" value="{{$country->population}}">
                         <small class="text-danger">@error('population')  {{$message}} @enderror</small>
                     </div>
                     <div class="col-md-6">
                         <label>Status</label>
-                        <select name="status"  class="form-control" >
+                        <select name="status"  class="form-control" value="{{$country->status}}">
                             <option value="">Please Select</option>
-                            <option value="1" @if(old("status") == 1) selected @endif>Active</option>
-                            <option value="0" @if(old("status") == 0) selected @endif>Deactive</option>
+                            <option value="1" @if(old("status",$country->status) == 1) selected @endif>Active</option>
+                            <option value="0" @if(old("status",$country->status) == 0) selected @endif>Deactive</option>
                         </select>
                         <small class="text-danger">@error('status')  {{$message}} @enderror</small>
                     </div>

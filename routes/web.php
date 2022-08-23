@@ -32,11 +32,12 @@ Route::get('akm', [AKMController::class, 'akm'])->name('akm');
 Route::get('desartegal', [DesartegalController::class, 'desartegal'])->name('desartegal');
 Route::get('welcom', [WelcomController::class, 'welcom'])->name('welcom');
 Route::get('index', [IndexController::class, 'index'])->name('index');
+
+
+
 Route::get('countries', [CountryController::class, 'index'])->name('countries.index');
 Route::get('countries.create', [CountryController::class, 'create'])->name('countries.create');
 Route::post('countries.store', [CountryController::class, 'store'])->name('countries.store');
 Route::get('countries/{id}/edit', [CountryController::class, 'edit'])->name('countries.edit');
 Route::post('countries/{id}/update', [CountryController::class, 'update'])->name('countries.update');
 Route::get('countries/{id}/delete', [CountryController::class, 'delete'])->name('countries.delete');
-
-

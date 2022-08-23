@@ -31,7 +31,7 @@
                 <td style="width:10%;">{{ $country->population }}</td>
 
                 <td>
-                @if($country->status == 0)
+                @if($country->status == 1)
                         <span class="badge badge-success">Active</span>
                     @else
                         <span class="badge badge-danger">Deactive</span>
@@ -40,7 +40,7 @@
                 </td>
                 <td>
                     <a href="{{route('countries.edit',$country->id)}} "class="btn btn-primary btn-sm">EDIT</a>
-                    &nbsp;|&nbsp;
+                    &nbsp;&nbsp;
                     <a href="{{route('countries.delete',$country->id)}} " class="btn btn-danger btn-sm">DELETE</a>
 
                 </td>
